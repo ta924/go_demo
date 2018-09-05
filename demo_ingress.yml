@@ -3,11 +3,6 @@ kind: Ingress
 metadata:
   name: demo-ingress
 spec:
-  rules:
-    - host: hello.demo.com
-      http:
-        paths:
-        - path: /
-          backend:
-            serviceName: demo
-            servicePort: 8080
+  backend:
+    serviceName: demo
+    servicePort: 8080
