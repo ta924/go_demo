@@ -4,7 +4,8 @@ metadata:
   name: demo-ingress
 spec:
   rules:
-  - http:
+  - host: hello.demo.com
+    http:
       paths:
       - path: /
         backend:
