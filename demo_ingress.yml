@@ -9,5 +9,5 @@ spec:
         paths:
         - path: /
           backend:
-          serviceName: demo
-          servicePort: 8080
+            serviceName: demo
+            servicePort: 8080
