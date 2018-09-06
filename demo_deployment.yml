@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: demo
-          image: ta924/myhello:1.0
+          image: ta924/myhello:1.1
           ports:
           - containerPort: 8080
