@@ -2,15 +2,23 @@ package main
 
 import (
 	"fmt"
-	"net/http"
 	"log"
+	"net/http"
+	"os"
 )
 
 func handler(w http.ResponseWriter, r *http.Request)  {
-	fmt.Fprintln(w, "Hello from GoLand")
+
+	name, err := os.Hostname()
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Fprintln(w, "Hello from ", name)
+
 }
 
 func main()  {
 	http.HandleFunc("/", handler)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":9090", nil))
 }
